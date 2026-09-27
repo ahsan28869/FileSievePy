@@ -1,0 +1,112 @@
+# Default FileSieve rules.
+# Copy this file to ~/.filesieve/rules.yaml to customize.
+rules:
+  - name: Invoices
+    enabled: true
+    priority: 100
+    mime_types:
+      - application/pdf
+    name_contains:
+      - invoice
+      - receipt
+      - bill
+    extensions: []
+    destination: Finance/Invoices/{year}/{month}
+    organize_by_date: true
+
+  - name: Images
+    enabled: true
+    priority: 50
+    mime_types:
+      - image/*
+    destination: Media/Images/{year}/{month}
+    organize_by_date: true
+
+  - name: Videos
+    enabled: true
+    priority: 50
+    mime_types:
+      - video/*
+    destination: Media/Videos/{year}/{month}
+    organize_by_date: true
+
+  - name: Audio
+    enabled: true
+    priority: 50
+    mime_types:
+      - audio/*
+    destination: Media/Audio/{year}/{month}
+    organize_by_date: true
+
+  - name: Archives
+    enabled: true
+    priority: 40
+    extensions:
+      - .zip
+      - .rar
+      - .7z
+      - .tar
+      - .gz
+    destination: Archives/{year}/{month}
+    organize_by_date: true
+
+  - name: Installers
+    enabled: true
+    priority: 40
+    extensions:
+      - .exe
+      - .msi
+      - .dmg
+      - .pkg
+      - .deb
+      - .rpm
+    destination: Installers/{year}/{month}
+    organize_by_date: true
+
+  - name: Documents
+    enabled: true
+    priority: 30
+    mime_types:
+      - application/pdf
+      - application/msword
+      - application/vnd.openxmlformats-officedocument.*
+      - text/plain
+    destination: Documents/{year}/{month}
+    organize_by_date: true
+
+  - name: Spreadsheets
+    enabled: true
+    priority: 30
+    extensions:
+      - .xls
+      - .xlsx
+      - .csv
+      - .ods
+    destination: Documents/Spreadsheets/{year}/{month}
+    organize_by_date: true
+
+  - name: Code
+    enabled: true
+    priority: 30
+    extensions:
+      - .py
+      - .js
+      - .ts
+      - .java
+      - .c
+      - .cpp
+      - .h
+      - .cs
+      - .go
+      - .rs
+      - .rb
+      - .php
+      - .html
+      - .css
+      - .json
+      - .xml
+      - .yaml
+      - .yml
+      - .toml
+    destination: Code/{year}/{month}
+    organize_by_date: true

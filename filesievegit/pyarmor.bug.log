@@ -1,0 +1,27 @@
+[BUG]: No module named 'PyInstaller'
+
+## Command Line
+D:\filesieve\venv\Scripts\pyarmor gen --pack onedir main.py
+
+## Environments
+Python 3.13.10
+Pyarmor 9.2.7 (trial), 000000, non-profits
+Platform windows.x86_64
+Native windows.amd64
+Home C:\Users\AHSAN\.pyarmor
+
+## Traceback
+Traceback (most recent call last):
+  File "D:\filesieve\venv\Lib\site-packages\pyarmor\cli\__main__.py", line 804, in main
+    main_entry(sys.argv[1:])
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "D:\filesieve\venv\Lib\site-packages\pyarmor\cli\__main__.py", line 789, in main_entry
+    return args.func(ctx, args)
+           ~~~~~~~~~^^^^^^^^^^^
+  File "D:\filesieve\venv\Lib\site-packages\pyarmor\cli\__main__.py", line 240, in cmd_gen
+    from .repack import find_packer
+  File "D:\filesieve\venv\Lib\site-packages\pyarmor\cli\repack.py", line 14, in <module>
+    from PyInstaller.archive.writers import ZlibArchiveWriter, CArchiveWriter
+ModuleNotFoundError: No module named 'PyInstaller'
+
+
